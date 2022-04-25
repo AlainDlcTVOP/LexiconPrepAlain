@@ -56,9 +56,9 @@ namespace LexiconAlain
 
         static void LargestValueOfToInputs()
         {
-            Console.WriteLine("Enter a number");
+            Console.WriteLine("Enter a number\n");
             var first = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the secound number");
+            Console.WriteLine("Enter the secound number\n");
             var secound = Convert.ToInt32(Console.ReadLine());
             var result = first > secound ? $"{first} is greater than {secound}" : $"{first} is less than {secound}";
             Console.WriteLine(result);
@@ -89,7 +89,7 @@ namespace LexiconAlain
                 }
 
 
-                Console.Write("Try again");
+                Console.Write("Try again\n");
             }
             Console.WriteLine($"Guesses {count} and the answer is {number}");
         }
@@ -99,6 +99,7 @@ namespace LexiconAlain
             try
             {
                 StreamWriter writer;
+                // Use your own Path ****
                 string path = @"C:\Users\Kungen\Desktop\TetsC\test.txt";
                 writer = new StreamWriter(path);
                 Console.WriteLine("Create a text in a file.");
@@ -120,7 +121,7 @@ namespace LexiconAlain
         static void ReadTexttoFile()
         {
             try
-            {
+            {     // Use your own Path **** to open the file
                 StreamReader reader = new StreamReader(@"C:\Users\Kungen\Desktop\TetsC\test.txt");
                 while (reader.EndOfStream == false)
                 {
@@ -229,6 +230,7 @@ namespace LexiconAlain
 
         static void PrintBetweenTwoValues()
         {
+            Console.WriteLine("Enter 2 numbers to see which ones are in between\n");
             Console.Write("Input1: ");
             var input1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input2: ");
@@ -278,7 +280,7 @@ namespace LexiconAlain
                 Console.Write($"{odd}\t");
             Console.WriteLine();
 
-            //displaying even numbers
+            
             Console.Write("Even numbers : \n");
             foreach (var even in Even)
                 Console.Write($"{even}\t");
